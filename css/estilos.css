@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Some-Time-Later';
+    src: url('../fuentes/Some-Time-Later.eot');
+    src: url('../fuentes/Some-Time-Later.eot?iefix') format('embedded-opentype'),
+        url('../fuentes/Some-Time-Later.woff') format('woff'),
+        url('../fuentes/Some-Time-Later.ttf') format('truetype'),
+        url('../fuentes/Some-Time-Later.svg#Some-Time-Later') format('svg');
+    font-style: normal;
+    font-weight: normal;    
+}
+
+/*Selector universal*/
+
+
+*{
+    box-sizing: border-box;/* box sizing ayuda a controlar el tamaño q pongo en el margin o padding*/
+}
+
+body{ /*una imagen de fondo , no pierde escala la imagen, los elementos estan centrados */
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    text-align: center;
+    font-family: 'Some-Time-Later';
+}
+
+section{
+    padding-bottom: 3em;
+}
+
+article{
+    width: 80%;
+    max-width: 75em;/*1200px*/
+    margin:auto;
+    position: relative;
+    border: 1px solid #ff0; 
+}
+
+ul{
+    list-style-type: none;/*sin viñetas*/
+    padding: 0;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    transition: all 1s;
+}
+
+/*Espacio de la imagen*/
+ul li a img{
+    display: block;
+    width: 250px;
+    height: auto;
+
+}    
+
+/*marco de la imagen*/
+ul li a{
+    background-color: #fff;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .7);
+    margin: 0 6px 20px;
+    padding: 10px 10px 25px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    display: inline-block;
+}
+
+/*texto de la imagen*/
+ul li a:after{
+    content: attr(title);
+    color: #333;
+    font-size: 1.25em;
+    position: relative;
+    top: 15px;
+}
+
+
+
+
+
+
+
+
